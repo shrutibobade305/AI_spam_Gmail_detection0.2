@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI Spam Detector</title>
+
+<link rel="stylesheet" href="static/css/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<div class="logo">
+<i class="fa-solid fa-shield-halved"></i>
+AI Spam Detector
+</div>
+
+
+<ul>
+
+<li>
+<a href="#">Home</a>
+</li>
+
+<li>
+<a href="#features">Features</a>
+</li>
+
+<li>
+<a href="#how">How It Works</a>
+</li>
+
+<li>
+<a href="#about">About</a>
+</li>
+
+</ul>
+
+</nav>
+
+
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+
+<div class="hero-left">
+
+
+<h1>
+
+Detect Spam Emails
+<br>
+
+With Artificial Intelligence
+
+</h1>
+
+
+
+<p>
+
+Protect yourself from phishing,
+fraud and unwanted messages using
+machine learning technology.
+
+</p>
+
+
+
+
+<form action="/predict" method="POST" id="spamForm">
+
+
+<textarea
+
+id="message"
+
+name="message"
+
+maxlength="500"
+
+placeholder="Paste your email message here..."
+
+required></textarea>
+
+
+
+<div class="counter">
+
+<span id="count">0</span>/500 characters
+
+</div>
+
+
+
+
+<button type="submit">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+Analyze Message
+
+</button>
+
+
+
+</form>
+
+
+
+
+
+<!-- EXAMPLES -->
+
+
+<div class="examples">
+
+
+<h3>
+Try Example Messages
+</h3>
+
+
+<button class="example" type="button">
+
+🎁 Congratulations! You won $5000.
+Click here to claim now.
+
+</button>
+
+
+
+<button class="example" type="button">
+
+📦 Your Amazon order has been delivered.
+
+</button>
+
+
+
+<button class="example" type="button">
+
+🏦 Urgent! Verify your bank account immediately.
+
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<!-- AI CARD -->
+
+
+<div class="hero-right">
+
+
+<div class="ai-card">
+
+
+<div class="shield">
+
+<i class="fa-solid fa-shield"></i>
+
+</div>
+
+
+<h2>
+99%
+</h2>
+
+
+<h3>
+Detection Accuracy
+</h3>
+
+
+<p>
+
+✔ Machine Learning
+
+<br>
+
+✔ Natural Language Processing
+
+<br>
+
+✔ Real-Time Detection
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+<!-- STATISTICS -->
+
+
+<section class="statistics">
+
+
+<div class="stat-card">
+
+<h2>
+5000+
+</h2>
+
+<p>
+Emails Checked
+</p>
+
+</div>
+
+
+
+<div class="stat-card">
+
+<h2>
+99%
+</h2>
+
+<p>
+Accuracy
+</p>
+
+</div>
+
+
+
+<div class="stat-card">
+
+<h2>
+0.2s
+</h2>
+
+<p>
+Prediction Time
+</p>
+
+</div>
+
+
+
+<div class="stat-card">
+
+<h2>
+24/7
+</h2>
+
+<p>
+Availability
+</p>
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- FEATURES -->
+
+
+<section id="features" class="features">
+
+
+<h1>
+Powerful Features
+</h1>
+
+
+
+<div class="feature-container">
+
+
+<div class="feature-card">
+
+<i class="fa-solid fa-brain"></i>
+
+<h3>
+Machine Learning
+</h3>
+
+<p>
+AI model trained to classify spam messages.
+</p>
+
+</div>
+
+
+
+
+<div class="feature-card">
+
+<i class="fa-solid fa-bolt"></i>
+
+<h3>
+Fast Detection
+</h3>
+
+<p>
+Get prediction results instantly.
+</p>
+
+</div>
+
+
+
+
+
+<div class="feature-card">
+
+<i class="fa-solid fa-lock"></i>
+
+<h3>
+Privacy Protection
+</h3>
+
+<p>
+Your messages are securely analyzed.
+</p>
+
+</div>
+
+
+
+
+
+<div class="feature-card">
+
+<i class="fa-solid fa-chart-line"></i>
+
+<h3>
+Smart Analytics
+</h3>
+
+<p>
+Detailed spam risk analysis.
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- HOW IT WORKS -->
+
+
+<section id="how" class="how">
+
+
+<h1>
+How It Works
+</h1>
+
+
+
+<div class="steps">
+
+
+<div class="step">
+
+<div class="number">
+1
+</div>
+
+<h3>
+Paste Email
+</h3>
+
+</div>
+
+
+
+
+<i class="fa-solid fa-arrow-right"></i>
+
+
+
+
+<div class="step">
+
+<div class="number">
+2
+</div>
+
+<h3>
+AI Analysis
+</h3>
+
+</div>
+
+
+
+
+
+<i class="fa-solid fa-arrow-right"></i>
+
+
+
+
+<div class="step">
+
+<div class="number">
+3
+</div>
+
+<h3>
+Get Result
+</h3>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- ABOUT -->
+
+
+<section id="about" class="about">
+
+
+<h1>
+About AI Spam Detector
+</h1>
+
+
+<p>
+
+This project uses Natural Language Processing
+and Machine Learning algorithms to identify
+spam and safe messages.
+
+</p>
+
+
+</section>
+
+
+
+
+
+
+<!-- FOOTER -->
+
+
+<footer>
+
+
+<h2>
+AI Spam Detector
+</h2>
+
+
+<p>
+Built with Python | Flask | Machine Learning
+</p>
+
+
+</footer>
+
+
+
+
+<link rel="stylesheet" href="static/css/style.css">
+
+
+</body>
+
+</html>

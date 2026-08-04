@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Prediction Result</title>
+
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+</head>
+
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<div class="logo">
+
+<i class="fa-solid fa-shield-halved"></i>
+
+AI Spam Detector
+
+</div>
+
+
+</nav>
+
+
+
+
+<section class="result-section">
+
+
+<div class="result-card">
+
+
+
+{% if prediction == "Spam" %}
+
+
+<div class="result-icon spam">
+
+<i class="fa-solid fa-triangle-exclamation"></i>
+
+</div>
+
+
+<h1 class="spam-text">
+
+Spam Email Detected
+
+</h1>
+
+
+
+{% else %}
+
+
+<div class="result-icon safe">
+
+<i class="fa-solid fa-circle-check"></i>
+
+</div>
+
+
+<h1 class="safe-text">
+
+Safe Email
+
+</h1>
+
+
+
+{% endif %}
+
+
+
+
+<p class="result-description">
+
+AI analysis completed successfully.
+
+</p>
+
+
+
+
+
+
+<!-- CONFIDENCE -->
+
+
+<div class="confidence-box">
+
+
+<h2>
+
+Confidence Score
+
+</h2>
+
+
+<div class="progress-container">
+
+
+<div class="progress-bar"
+
+style="width: {{ confidence }}%;">
+
+</div>
+
+
+</div>
+
+
+
+<h3>
+
+{{ confidence }}%
+
+</h3>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- PROBABILITY CARDS -->
+
+
+<div class="probability-container">
+
+
+
+<div class="prob-card">
+
+
+<i class="fa-solid fa-virus"></i>
+
+
+<h2>
+
+{{ spam_probability }}%
+
+</h2>
+
+
+<p>
+
+Spam Probability
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="prob-card">
+
+
+<i class="fa-solid fa-shield"></i>
+
+
+<h2>
+
+{{ safe_probability }}%
+
+</h2>
+
+
+<p>
+
+Safe Probability
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- RISK METER -->
+
+
+<div class="risk-box">
+
+
+<h2>
+
+Spam Risk Level
+
+</h2>
+
+
+{% if prediction == "Spam" %}
+
+
+<div class="high-risk">
+
+HIGH RISK
+
+</div>
+
+
+{% else %}
+
+
+<div class="low-risk">
+
+LOW RISK
+
+</div>
+
+
+{% endif %}
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- AI INSIGHTS -->
+
+
+<div class="insight-box">
+
+
+<h2>
+
+<i class="fa-solid fa-brain"></i>
+
+AI Explanation
+
+</h2>
+
+
+
+<ul>
+
+
+{% for reason in reasons %}
+
+
+<li>
+
+<i class="fa-solid fa-circle-check"></i>
+
+{{ reason }}
+
+</li>
+
+
+
+{% endfor %}
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- BUTTONS -->
+
+
+<div class="result-buttons">
+
+
+<a href="/" class="back-button">
+
+<i class="fa-solid fa-arrow-left"></i>
+
+Analyze Another Email
+
+</a>
+
+
+
+<button onclick="window.print()" class="download-button">
+
+<i class="fa-solid fa-download"></i>
+
+Save Report
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<footer>
+
+
+<h2>
+
+AI Spam Detector
+
+</h2>
+
+
+<p>
+
+Machine Learning | NLP | Flask
+
+</p>
+
+
+</footer>
+
+
+
+
+</body>
+
+</html>
