@@ -35,10 +35,11 @@ examples.forEach(function(example){
 
         if(messageBox){
 
-            messageBox.value = example.innerText;
+            messageBox.value = example.innerText.trim();
 
-            counter.innerText = messageBox.value.length;
-
+            if(counter){
+                counter.innerText = messageBox.value.length;
+            }
 
             messageBox.focus();
 
